@@ -1,0 +1,57 @@
+{
+    "env": {
+      "es2021": true,
+      "node": true,
+      "jest": true
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      },
+      "react-native": {
+        "version": "detect"
+      },
+      "import/resolver": {
+        "node": {
+          "paths": ["src"]
+         },
+        "babel-module": {}
+      }
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended",
+      "plugin:react/jsx-runtime",
+      "prettier", 
+      "next",
+      "plugin:testing-library/react"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 11,
+      "sourceType": "module"
+    },
+    "plugins": ["react", "react-hooks", "@typescript-eslint", "import", "testing-library"],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "off",
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+      "no-use-before-define": ["error", { "variables": false }],
+      "@typescript-eslint/ban-ts-comment": "off",
+      "testing-library/no-debug": "off",
+      "@next/next/no-img-element": "off",
+      "import/no-anonymous-default-export": "off",
+      "testing-library/prefer-screen-queries": "warn"
+    },
+    "ignorePatterns": ["node_modules/", ".next/", "public/", "*.css"]
+  }

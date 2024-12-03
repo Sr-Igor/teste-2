@@ -1,0 +1,63 @@
+{
+    "types": {
+      "FEAT": "Adição de funcionalidade.",
+      "FIX": "Correção de defeito.",
+      "BUG": "Correção de um bug.",
+      "DOCS": "Mudança em documentação.",
+      "STYLE": "Mudança de formatação ou estilo, que não afeta a execução do código.",
+      "REFACTOR": "Mudança na organização do código, que não afeta o comportamento existente.",
+      "TEST": "Adição ou mudança de um teste.",
+      "CHORE": "Adição ou mudança em script de build, que não afeta o código de produção.",
+      "PERF": "Mudança de código para melhoria de desempenho.",
+      "CI": "Mudança de configuração de integração contínua.",
+      "BUILD": "Mudança em arquivos de build ou em dependências externas.",
+      "BREAKING": "Mudança que quebra a compatibilidade com versões anteriores.",
+      "WIP": "Trabalho em progresso.",
+      "REVERT": "Reverter para um commit anterior.",
+      "TEMP": "Commit temporário, que não deve ser incluído no CHANGELOG.",
+      "RELEASE": "Commit de release.",
+      "DEPLOY": "Commit de deploy.",
+      "HOTFIX": "Commit de hotfix.",
+      "CONFIG": "Commit de configuração.",
+      "SECURITY": "Commit de segurança."
+    },
+    "min-length": 3,
+    "max-length": 80,
+    "example": "git commit -m \"[FIX]: Qualquer mensagem de commit aqui\"",
+    "rules": {
+      "type-case": [2, "always", "upper-case"],
+      "type-empty": [2, "never"],
+      "type-enum": [
+        2,
+        "always",
+        [
+          "FEAT",
+          "FIX",
+          "BUG",
+          "DOCS",
+          "STYLE",
+          "REFACTOR",
+          "TEST",
+          "CHORE",
+          "PERF",
+          "CI",
+          "BUILD",
+          "BREAKING",
+          "WIP",
+          "REVERT",
+          "TEMP",
+          "RELEASE",
+          "DEPLOY",
+          "HOTFIX",
+          "CONFIG",
+          "SECURITY"
+        ]
+      ],
+      "header-pattern": [
+        2,
+        "always",
+        "^\[(?<type>[A-Z]+)\]:\s.*$"
+      ],
+      "header-match": [2, "always"]
+    }
+  }
